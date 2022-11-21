@@ -3,8 +3,15 @@ import 'package:flutter/material.dart';
 import '../../resources/app_colors.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({Key? key, required this.content}) : super(key: key);
+  const CustomButton(
+      {Key? key,
+      required this.content,
+      required this.contentColor,
+      required this.primaryColor})
+      : super(key: key);
   final String? content;
+  final Color? primaryColor;
+  final Color? contentColor;
 
   @override
   Widget build(BuildContext context) {
@@ -13,10 +20,10 @@ class CustomButton extends StatelessWidget {
       child: Text(
         // ignore: unnecessary_this
         this.content!,
-        style: const TextStyle(
-          fontWeight: FontWeight.w400,
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
           fontSize: 16,
-          color: Colors.white,
+          color: contentColor,
         ),
       ),
       style: ElevatedButton.styleFrom(
@@ -24,8 +31,8 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.all(
           Radius.circular(77),
         )),
-        primary: AppColor.h009,
-        fixedSize: const Size(354, 40),
+        primary: primaryColor,
+        fixedSize: const Size(354, 50),
       ),
     );
   }

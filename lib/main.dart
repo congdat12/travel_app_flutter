@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:travelapp_flutter/pages/intro/intro_page.dart';
 
+import 'package:travelapp_flutter/pages/intro/widget/content_page_view.dart';
+
 import 'components/button/custom_button.dart';
 import 'components/textfield/custom_textfield.dart';
 import 'components/textfield/custom_textfield_password.dart';

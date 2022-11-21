@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:travelapp_flutter/components/button/custom_button.dart';
 import 'package:travelapp_flutter/resources/app_colors.dart';
 
-class IntroPage extends StatefulWidget {
-  const IntroPage({Key? key}) : super(key: key);
+class CustomPageView extends StatefulWidget {
+  const CustomPageView({Key? key}) : super(key: key);
 
   @override
-  State<IntroPage> createState() => _IntroPageState();
+  State<CustomPageView> createState() => _CustomPageViewState();
 }
 
-class _IntroPageState extends State<IntroPage> {
+class _CustomPageViewState extends State<CustomPageView> {
   @override
   Widget build(BuildContext context) {
     final PageController pageController = PageController();
     int currentIndex = 0;
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(left: 30, right: 30, top: 30),
+        padding: const EdgeInsets.only(left: 30, right: 30),
         child: Column(
           children: [
             SizedBox(
@@ -106,7 +106,7 @@ class _IntroPageState extends State<IntroPage> {
               primaryColor: AppColor.h0xff,
             ),
             const SizedBox(
-              height: 15,
+              height: 29,
             )
           ],
         ),
