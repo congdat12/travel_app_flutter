@@ -92,18 +92,18 @@ class _CustomPageViewState extends State<CustomPageView> {
               child: Text('Custom and fast planning\n with a low price'),
             ),
             const Spacer(),
-            const CustomButton(
+             CustomButton(
               content: 'Login',
               contentColor: AppColor.h0xff,
-              primaryColor: AppColor.h009,
+              primaryColor: AppColor.h009, onPress: () {  },
             ),
             const SizedBox(
               height: 19,
             ),
-            const CustomButton(
+             CustomButton(
               content: 'Create Account',
               contentColor: AppColor.h0000,
-              primaryColor: AppColor.h0xff,
+              primaryColor: AppColor.h0xff, onPress: () {  },
             ),
             const SizedBox(
               height: 29,

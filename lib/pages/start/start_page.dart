@@ -52,10 +52,10 @@ class StartPage extends StatelessWidget {
                         ]),
                   ),
                   const Spacer(),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 15, right: 15),
+                   Padding(
+                    padding: const EdgeInsets.only(left: 15, right: 15),
                     child: CustomButton(
-                      content: 'LOGIN', contentColor: null, primaryColor: null,
+                      content: 'LOGIN', contentColor: null, primaryColor: null, onPress: () {  },
                     ),
                   ),
                   const SizedBox(

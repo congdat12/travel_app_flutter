@@ -83,10 +83,10 @@ class SignupPage extends StatelessWidget {
               const SizedBox(
                 height: 32,
               ),
-              const CustomButton(
+               CustomButton(
                 content: 'Login',
                 contentColor: AppColor.h69,
-                primaryColor: AppColor.h009,
+                primaryColor: AppColor.h009, onPress: () {  },
               ),
               const SizedBox(
                 height: 40,

@@ -23,19 +23,30 @@ class HomePage extends StatelessWidget {
                             image: AssetImage('assets/images/image 1.png'),
                             fit: BoxFit.fill)),
                   ),
-                  Column(
-                    children: const [
-                      CustomTextField(hinText: 'Search', obcureText: false),
-                      Text('Cafe Town'),
-                      Text('alo ronaldo'),
-                      // Row(
-                      //   children: [],
-                      // ),
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.only(top: 80,right: 15, left: 15),
+                    child: Column(
+                      children:  [
+                        const CustomTextField(hinText: 'Search', obcureText: false),
+                        const Spacer(),
+                        const Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text('Cafe Town')),
+                        const Align (
+                          alignment: Alignment.centerLeft,
+                          child: Text('alo ronaldo')),
+                        Row(
+                          children: [
+                            CustomButton(content: 'View detail', contentColor: AppColor.h0xff, primaryColor: AppColor.h0xff, onPress: (){}),
+                            
+                          ],
+                        )
+                      ],
+                    ),
                   )
                 ],
               )),
-          Expanded(
+          const Expanded(
             flex: 1,
             child: Text('data'),
           )
