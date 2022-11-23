@@ -5,6 +5,8 @@ import 'package:travelapp_flutter/pages/auth/signup/signup_page.dart';
 import 'package:travelapp_flutter/pages/intro/intro_page.dart';
 
 import 'package:travelapp_flutter/pages/intro/widget/content_page_view.dart';
+import 'package:travelapp_flutter/pages/main/home/home_page.dart';
+import 'package:travelapp_flutter/pages/main/main_page.dart';
 
 import 'components/button/custom_button.dart';
 import 'components/textfield/custom_textfield.dart';
@@ -35,7 +37,7 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           //primarySwatch: Colors.red ,
           ),
-      home: const LoginPage(),
+      home: const HomePage(),
     );
   }
 }
