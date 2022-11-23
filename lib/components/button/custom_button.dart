@@ -32,7 +32,7 @@ class CustomButton extends StatelessWidget {
           Radius.circular(77),
         )),
         primary: primaryColor,
-        fixedSize: const Size(354, 50),
+        fixedSize:  const Size(354, 50),
       ),
     );
   }

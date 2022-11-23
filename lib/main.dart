@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:travelapp_flutter/pages/auth/login/login_page.dart';
+import 'package:travelapp_flutter/pages/auth/signup/signup_page.dart';
 import 'package:travelapp_flutter/pages/intro/intro_page.dart';
 
 import 'package:travelapp_flutter/pages/intro/widget/content_page_view.dart';
@@ -33,7 +35,7 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           //primarySwatch: Colors.red ,
           ),
-      home: const IntroPage(),
+      home: const LoginPage(),
     );
   }
 }
