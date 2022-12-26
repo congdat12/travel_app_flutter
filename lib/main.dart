@@ -5,19 +5,30 @@ import 'package:travelapp_flutter/pages/auth/signup/signup_page.dart';
 import 'package:travelapp_flutter/pages/intro/intro_page.dart';
 
 import 'package:travelapp_flutter/pages/intro/widget/content_page_view.dart';
+import 'package:travelapp_flutter/pages/main/home/Explore/explore.dart';
+import 'package:travelapp_flutter/pages/main/home/Explore/widget/best_deal.dart';
+import 'package:travelapp_flutter/pages/main/home/Explore/widget/luxury.dart';
+import 'package:travelapp_flutter/pages/main/home/detail%20room/detail_room.dart';
+import 'package:travelapp_flutter/pages/main/home/detail%20room/widget/hoteldetail.dart';
+import 'package:travelapp_flutter/pages/main/home/detail%20room/widget/review.dart';
+import 'package:travelapp_flutter/pages/main/home/detail%20room/widget/review_summary.dart';
 import 'package:travelapp_flutter/pages/main/home/home_page.dart';
+import 'package:travelapp_flutter/pages/main/home/widget/list_best_deal.dart';
+import 'package:travelapp_flutter/pages/main/home/widget/list_items.dart';
 import 'package:travelapp_flutter/pages/main/main_page.dart';
+import 'package:travelapp_flutter/resources/app_colors.dart';
 
 import 'components/button/custom_button.dart';
 import 'components/textfield/custom_textfield.dart';
-import 'components/textfield/custom_textfield_password.dart';
+
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);  
+  final primary = Colors.white;
 
   // This widget is the root of your application.
   @override
@@ -26,6 +37,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        primaryColor: primary
           // This is the theme of your application.
           //
           // Try running your application with "flutter run". You'll see the
@@ -37,7 +49,7 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           //primarySwatch: Colors.red ,
           ),
-      home: const HomePage(),
+      home:  HomePage(),
     );
   }
 }

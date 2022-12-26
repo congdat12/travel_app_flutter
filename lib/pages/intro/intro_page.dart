@@ -89,7 +89,7 @@ class _IntroPageState extends State<IntroPage> {
               primaryColor: AppColor.h009,
               onPress: () {
                 Route route =
-                    MaterialPageRoute(builder: (_) => const LoginPage());
+                    MaterialPageRoute(builder: (_) =>  LoginPage());
                 Navigator.of(context).push(route);
               },
             ),
@@ -100,7 +100,7 @@ class _IntroPageState extends State<IntroPage> {
               primaryColor: AppColor.h0xff,
               onPress: () {
                 Route route =
-                    MaterialPageRoute(builder: (_) => const SignupPage());
+                    MaterialPageRoute(builder: (_) =>  SignupPage());
                 Navigator.of(context).push(route);
               },
             ),

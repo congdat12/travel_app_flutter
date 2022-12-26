@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-
+import 'package:rflutter_alert/rflutter_alert.dart';
+import 'package:travelapp_flutter/pages/main/home/home_page.dart';
 
 import '../../../components/button/custom_button.dart';
 import '../../../components/button/custom_icon_button.dart';
@@ -9,7 +10,9 @@ import '../../../resources/app_colors.dart';
 import '../signup/signup_page.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  LoginPage({Key? key}) : super(key: key);
+  final TextEditingController userName = TextEditingController();
+  TextEditingController passWord = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -60,11 +63,18 @@ class LoginPage extends StatelessWidget {
             const SizedBox(
               height: 87,
             ),
-            const CustomTextField(hinText: 'Username', obcureText: false),
+            CustomTextField(
+                textEditingController: userName,
+                hinText: 'Username',
+                obcureText: false),
             const SizedBox(
               height: 20,
             ),
-            const CustomTextField(hinText: 'Password', obcureText: true),
+            CustomTextField(
+              hinText: 'Password',
+              obcureText: true,
+              textEditingController: passWord,
+            ),
             Align(
               alignment: Alignment.centerRight,
               child: TextButton(
@@ -78,10 +88,19 @@ class LoginPage extends StatelessWidget {
             const SizedBox(
               height: 32,
             ),
-             CustomButton(
+            CustomButton(
               content: 'Login',
               contentColor: AppColor.h69,
-              primaryColor: AppColor.h009, onPress: () {  },
+              primaryColor: AppColor.h009,
+              onPress: () {
+                if (userName.text == '123' && passWord.text == '123') {
+                  Route route =
+                      MaterialPageRoute(builder: (_) => const HomePage());
+                  Navigator.of(context).push(route);
+                } else {
+                  Alert(context: context, title: "WTF", desc: "Tai khoan sai kia ba").show();
+                }
+              },
             ),
             const Spacer(),
             RichText(
@@ -96,8 +115,8 @@ class LoginPage extends StatelessWidget {
                       style: const TextStyle(color: AppColor.h009),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
-                          Route route = MaterialPageRoute(
-                              builder: (_) => const SignupPage());
+                          Route route =
+                              MaterialPageRoute(builder: (_) => SignupPage());
                           Navigator.of(context).push(route);
                         },
                     )

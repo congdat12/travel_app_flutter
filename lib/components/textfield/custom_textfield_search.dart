@@ -1,44 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
 
-class CustomTextField extends StatelessWidget {
-   CustomTextField({Key? key, required this.hinText, required this.obcureText, required this.textEditingController}) : super(key: key);
-  final String? hinText;
-  final bool obcureText;
-  TextEditingController textEditingController;
-  
+class CustomTextFieldSearch extends StatelessWidget {
+  const CustomTextFieldSearch({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
       height: 50,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         boxShadow: [
           BoxShadow(
-              color: Colors.grey.shade300, blurRadius: 10, offset: Offset.zero),
+              color: Colors.black45, blurRadius: 15,offset: Offset(4,8) ),
         ],
       ),
-      child: TextField(
-        controller: textEditingController,
-        obscureText: obcureText,
+      child: const TextField(
+        
         decoration: InputDecoration(
+          prefixIcon: Icon(Icons.search, color: Colors.grey,),
           
           filled: true,
           fillColor: Colors.white,
-          enabledBorder: const OutlineInputBorder(
+          enabledBorder:  OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(30)),
             borderSide: BorderSide(
               color: Colors.white,
             ),
           ),
-          focusedBorder: const OutlineInputBorder(
+          focusedBorder:  OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(30)),
             borderSide: BorderSide(
               color: Colors.white,
             ),
           ),
-          hintText: hinText,
-          hintStyle: const TextStyle(
+          hintText: 'Search',
+          hintStyle:  TextStyle(
             //fontFamily: 16,
             fontSize: 16,
             color: Color(0xFFD0D0D0),

@@ -5,7 +5,11 @@ import 'package:travelapp_flutter/components/textfield/custom_textfield.dart';
 import 'package:travelapp_flutter/resources/app_colors.dart';
 
 class SignupPage extends StatelessWidget {
-  const SignupPage({Key? key}) : super(key: key);
+   SignupPage({Key? key}) : super(key: key);
+  TextEditingController firstName = TextEditingController();
+  TextEditingController lastName = TextEditingController();
+  TextEditingController firstMail = TextEditingController();
+  TextEditingController firstPassword = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -56,19 +60,26 @@ class SignupPage extends StatelessWidget {
               const SizedBox(
                 height: 37,
               ),
-              const CustomTextField(hinText: 'First Name', obcureText: false),
+               CustomTextField(
+                textEditingController: firstName,
+                hinText: 'First Name', obcureText: false),
               const SizedBox(
                 height: 20,
               ),
-              const CustomTextField(hinText: 'Last Name', obcureText: false),
+               CustomTextField(
+                textEditingController: lastName,
+                hinText: 'Last Name', obcureText: false),
               const SizedBox(
                 height: 20,
               ),
-              const CustomTextField(hinText: 'First Mail', obcureText: false),
+               CustomTextField(
+                textEditingController: firstMail,
+                hinText: 'First Mail', obcureText: false),
               const SizedBox(
                 height: 20,
               ),
-              const CustomTextField(
+               CustomTextField(
+                textEditingController: firstMail,
                   hinText: 'First Password', obcureText: true),
               Align(
                 alignment: Alignment.centerRight,

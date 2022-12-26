@@ -28,7 +28,7 @@ class _CustomPageViewState extends State<CustomPageView> {
                   setState(() {
                     currentIndex = index;
                   });
-                  print('current : $currentIndex');
+                
                 },
                 children: const <Widget>[
                   Center(
@@ -67,8 +67,7 @@ class _CustomPageViewState extends State<CustomPageView> {
                     scrollDirection: Axis.horizontal,
                     itemCount: 3,
                     itemBuilder: (context, index) {
-                      // print('currentindex: $currentIndex');
-                      print('index: $index');
+                      
                       return buildIndicator(index == 0);
                     }),
               ),
